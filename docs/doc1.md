@@ -13,25 +13,17 @@ To serve as an example page when styling markdown based Docusaurus sites.
 
 ## Headers
 
-# H1 - Create the best documentation
-
 ## H2 - Create the best documentation
 
 ### H3 - Create the best documentation
-
-#### H4 - Create the best documentation
-
-##### H5 - Create the best documentation
-
-###### H6 - Create the best documentation
 
 ---
 
 ## Emphasis
 
-Emphasis, aka italics, with *asterisks* or _underscores_.
+Emphasis, aka italics, with _asterisks_ or _underscores_.
 
-Strong emphasis, aka bold, with **asterisks** or __underscores__.
+Strong emphasis, aka bold, with **asterisks** or **underscores**.
 
 Combined emphasis with **asterisks and _underscores_**.
 
@@ -48,11 +40,11 @@ Strikethrough uses two tildes. ~~Scratch this.~~
    1. Ordered sub-list
 1. And another item.
 
-* Unordered list can use asterisks
+- Unordered list can use asterisks
 
-- Or minuses
+* Or minuses
 
-+ Or pluses
+- Or pluses
 
 ---
 
@@ -76,17 +68,19 @@ Some text to show that the reference links can follow later.
 [1]: http://slashdot.org/
 [link text itself]: http://www.reddit.com/
 
+This is a link to [another document.](doc3.md) This is a link to an [external page.](http://www.example.com/)
+
 ---
 
 ## Images
 
 Here's our logo (hover to see the title text):
 
-Inline-style: ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png 'Logo Title Text 1')
+Inline-style: ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
 Reference-style: ![alt text][logo]
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png 'Logo Title Text 2'
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
 Images from any folder can be used by providing path to file. Path should be relative to markdown file.
 
@@ -97,7 +91,7 @@ Images from any folder can be used by providing path to file. Path should be rel
 ## Code
 
 ```javascript
-var s = 'JavaScript syntax highlighting';
+var s = "JavaScript syntax highlighting";
 alert(s);
 ```
 
@@ -113,7 +107,7 @@ But let's throw in a <b>tag</b>.
 
 ```js {2}
 function highlightMe() {
-  console.log('This line can be highlighted!');
+  console.log("This line can be highlighted!");
 }
 ```
 
@@ -172,10 +166,14 @@ This line is also a separate paragraph, but... This line is only separated by a 
 
 ## Admonitions
 
+```
 :::note
-
 This is a note
+:::
+```
 
+:::note
+This is a note
 :::
 
 :::tip
@@ -201,3 +199,34 @@ This is a caution
 This is a warning
 
 :::
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+## Tabs
+
+```
+<Tabs
+  defaultValue="apple"
+  values={[
+    {label: 'Apple', value: 'apple'},
+    {label: 'Orange', value: 'orange'},
+    {label: 'Banana', value: 'banana'},
+  ]}>
+  <TabItem value="apple">This is an apple 🍎</TabItem>
+  <TabItem value="orange">This is an orange 🍊</TabItem>
+  <TabItem value="banana">This is a banana 🍌</TabItem>
+</Tabs>
+```
+
+<Tabs
+defaultValue="apple"
+values={[
+{label: 'Apple', value: 'apple'},
+{label: 'Orange', value: 'orange'},
+{label: 'Banana', value: 'banana'},
+]}>
+<TabItem value="apple">This is an apple 🍎</TabItem>
+<TabItem value="orange">This is an orange 🍊</TabItem>
+<TabItem value="banana">This is a banana 🍌</TabItem>
+</Tabs>
