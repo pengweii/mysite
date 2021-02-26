@@ -1,6 +1,5 @@
 ---
-id: vue_cli
-title: vue_cli
+title: vue cli
 ---
 
 外部只能访问 static 文件夹下的内容
@@ -137,3 +136,24 @@ export default {
 ## 搜索内容
 
 用到双向绑定 v-model
+
+## 优化
+使用`keep-alive`，使用后会多一个生命周期函数`activated`。当页面重新被显示的时候，activated会被执行，但mounted不会。
+
+## 对全局事件的解绑
+
+``` js
+activated () {
+    window.addEventListener('scroll', this.handleScroll)
+  }
+```
+
+当使用了一个全局事件，会对其他页面造成影响，应对其进行解绑
+```js
+  activated () {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+```

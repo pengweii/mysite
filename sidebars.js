@@ -10,25 +10,20 @@
 // };
 // 
 module.exports = {
-  docs2: [
+  docs: [
     {
       type: 'category',
-      label: 'Docusaurus',
-      items: ["doc1", "doc2"],
+      label: 'Guide',
+      items: ["guide/doc1", "guide/装机配置"],
+    },{
+      type: 'category',
+      label: '前端基础',
+      items: ["前端基础/css"],
     },
     {
       type: 'category',
-      label: 'Vue',
-      items: ["Vue/vue_cli", "doc3"]
+      label: 'Vue基础',
+      items: ["Vue基础/01", "Vue基础/02"]
     },
-    {
-      type: 'category',
-      label: 'Features',
-      items: ["mdx"]
-    },
-    "doc1"
-  ],
-  test: [
-    'doc1'
   ]
 };

@@ -23,14 +23,7 @@ module.exports = {
           position: "left",
         },
         { to: "blog", label: "Blog", position: "left" },
-        {
-          to: "/test/",
-          label: "Test",
-          position: "left",
-          docId: '装机配置',
-          // activeBasePath: "docs",
-          activeBaseRegex: `/test/`,
-        },
+        
         {
           href: "https://github.com/facebook/docusaurus",
           label: "GitHub",
