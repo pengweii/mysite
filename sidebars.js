@@ -23,7 +23,7 @@ module.exports = {
     {
       type: 'category',
       label: 'Vue基础',
-      items: ["Vue基础/01", "Vue基础/02"]
+      items: ["Vue基础/01", "Vue基础/02", "Vue基础/03", "Vue基础/04"]
     },
   ]
 };

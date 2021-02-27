@@ -8,6 +8,7 @@ module.exports = {
   favicon: "img/hammer.svg",
   organizationName: "pengweii", // Usually your GitHub org/user name.
   projectName: "mysite", // Usually your repo name.
+  themes: ['@docusaurus/theme-live-codeblock'],
   themeConfig: {
     navbar: {
       title: "My Site",
