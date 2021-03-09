@@ -32,6 +32,7 @@ module.exports = {
         "Vue基础/05",
         "Vue基础/06",
         "Vue基础/07",
+        "Vue基础/08",
       ],
     },
   ],
